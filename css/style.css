@@ -116,11 +116,27 @@ h1{
     margin: var(--marginGrid) 0 ;
     color: white;
 }
-.hero>a{
-    padding: var(--marginGrid);
+.hero>.boton{
     background-color: var(--colorPrincipal);
-    color: white;
+    padding: var(--marginGrid);
+    text-align: center;
+    width: 175px;
     margin-top: calc(var(--marginGrid)*2);
+    margin-bottom: var(--marginGrid);
+}
+.hero>.boton>a{
+    color: white;
+}
+.hero section{
+    display: flex;
+    width: 175px;
+    justify-content: space-between;
+}
+.hero section article{
+    font-size: 200%;
+}
+.hero section article a{
+    color: white;
 }
 /* Final de hero */
 /* Media Queries */
