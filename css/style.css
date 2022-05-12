@@ -30,3 +30,37 @@ body{
     max-width: var(--anchoMaximo);
     margin: 0 auto;
 }
+/* Inicio Header */
+header .navTop{
+    background-color: var(--colorSecundario);
+    padding: var(--marginGrid);
+}
+header .navTop .container{
+    display: flex;
+    justify-content: space-around;
+}
+header .navTop a{
+    text-decoration: none;
+}
+header .navTop a i{
+    color: var(--colorPrincipal);
+    font-size: 140%;
+    /*Los iconos tipograficos funcionan como fuentes*/
+}
+header .navTop a i{
+    color: var(--colorPrincipal);
+}
+header .navTop a span{
+    color: white;
+    display: none;
+}
+/* Final Header */
+/* Media Queries */
+@media(min-width: 48em){
+    header .navTop a span{
+        display: inline;
+    }
+    header .navTop .container{
+        justify-content: space-between;
+    }
+}
