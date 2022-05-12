@@ -95,6 +95,34 @@ header nav ul li a{
     color: var(--colorPrincipal);
 }
 /* Final Header */
+/* Principio de hero */
+.hero{
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    padding: 100px var(--marginGrid);
+}
+h1{
+    font-family: var(--fuenteSecundaria);
+    color: white;
+    font-size: 250%;
+}
+.hero h2{
+    color: var(--colorPrincipal);
+    font-size: 120%;
+    text-shadow: 2px 2px 5px black;
+    margin: var(--marginGrid) 0 ;
+}
+.hero h3{
+    margin: var(--marginGrid) 0 ;
+    color: white;
+}
+.hero>a{
+    padding: var(--marginGrid);
+    background-color: var(--colorPrincipal);
+    color: white;
+    margin-top: calc(var(--marginGrid)*2);
+}
+/* Final de hero */
 /* Media Queries */
 @media(min-width: 48em){
     header .navTop a span{
