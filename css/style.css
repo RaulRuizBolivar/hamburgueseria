@@ -18,6 +18,10 @@ img{
     width: 100%;
     height: auto;
 }
+
+a{
+    text-decoration: none;
+}
 html{
     /* Para generar un scroll animado */
     scroll-behavior: smooth;
@@ -53,6 +57,42 @@ header .navTop a i{
 header .navTop a span{
     color: white;
     display: none;
+}
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header nav figure{
+    width: 150px;
+    padding: var(--marginGrid);
+}
+header nav .hamburguesa{
+    padding: var(--marginGrid);
+}
+header nav .hamburguesa div{
+    width: 30px;
+    border-top: 2px solid #80808080;
+    margin-bottom: 10px;
+}
+header nav ul{
+    display: block;
+    width: 100%;
+    padding: var(--marginGrid);
+}
+header nav ul li{
+    text-align: center;
+    padding: var(--marginGrid);
+    border-bottom: 1px solid grey;
+}
+header nav ul li:last-of-type{
+    border-bottom: none;
+}
+header nav ul li a{
+    color: grey;
+}
+.activo{
+    color: var(--colorPrincipal);
 }
 /* Final Header */
 /* Media Queries */
