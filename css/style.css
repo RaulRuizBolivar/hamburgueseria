@@ -38,11 +38,28 @@ body{
     font-size: var(--fontSize);
 }
 
+
 .container{
     max-width: var(--anchoMaximo);
     margin: 0 auto;
 }
 
+.boton{
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    color: white;
+}
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+}
+.boton:hover i{
+    transition: .5s;
+    transform: translateX(5px);
+}
 /* inicio header */
 
 header .nav_top{
@@ -119,6 +136,7 @@ header nav:after{
 }
 /* final header */
 
+
 /* principo de footer */
 
 footer{
@@ -153,7 +171,52 @@ footer a:hover{
 /* final footer */
 
 
+/* principo de hero */
+.hero{
+    background-image: url(../images/fondo.jpg);
+    background-color: #999;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: 60vh;
+    display: flex;
+}
+.hero .container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+.hero h1{
+    font-family: var(--fuenteSecundaria);
+    color: white;
+    font-size: 230%;
+}
+.hero h2{
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 1px 1px 3px black;
+}
+.hero :is(h2 , .container div){
+    margin: var(--marginGrid) 0 ;
+}
+.hero p{
+    color: white;
+    font-size: 115%;
+}
+.hero .social{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero .social a{
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
+/* final hero */
 
+/* inicio boton */
 
 
 /* mediaquerys */
@@ -162,14 +225,14 @@ footer a:hover{
 @media(min-width: 48em){
     
     header .nav_top a span{
-      display: inline;
+        display: inline;
     }
-
+    
     header .nav_top .container{
-      justify-content: space-between;
+        justify-content: space-between;
     }
-
-
+    
+    
 }
 
 /* breakpoint 1004px */
@@ -178,8 +241,32 @@ footer a:hover{
     header nav .hamburguesa{
         display: none;
     }
-
+    
     header nav .menu{
+        /* principo de hero */
+        .hero{
+            background-image: url(../images/fondo.jpg);
+            height: 60vh;
+        }
+        /* final hero */
+        /* principo de hero */
+        .hero{
+            background-image: url(../images/fondo.jpg);
+            height: 60vh;
+        }
+        /* final hero */
+        /* principo de hero */
+        .hero{
+            background-image: url(../images/fondo.jpg);
+            height: 60vh;
+        }
+        /* final hero */
+        /* principo de hero */
+        .hero{
+            background-image: url(../images/fondo.jpg);
+            height: 60vh;
+        }
+        /* final hero */
         float: right;
         padding-top: 0;
         clear: none;
