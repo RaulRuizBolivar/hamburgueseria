@@ -310,6 +310,9 @@ section#blog h4{
 section#blog p{
     line-height: 1.5em;
 }
+section#blog article{
+    padding: var(--marginGrid);
+}
 section#blog article figure{
     position: relative;
     padding-bottom: var(--marginGrid);
@@ -361,7 +364,6 @@ section#blog article figure .fecha p{
     #ourservices article{
         border-left: 1px solid #aaa;
     }
-
 }
 
 /* breakpoint 1004px */
@@ -392,5 +394,7 @@ section#blog article figure .fecha p{
     #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
-
+    section#blog div.container article{
+        width: 33.333%;
+    }
 }
