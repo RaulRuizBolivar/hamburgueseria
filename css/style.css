@@ -301,8 +301,14 @@ section#blog .container article{
 section#blog h3{
     font-family: var(--fuentePrincipal);
     font-weight: 400;
-    font-size: 150%;
+    font-size: 200%;
     text-align: left;
+}
+section#blog h4{
+    margin: var(--marginGrid) 0;
+}
+section#blog p{
+    line-height: 1.5em;
 }
 section#blog article figure{
     position: relative;
@@ -320,6 +326,7 @@ section#blog article figure .fecha{
 section#blog article figure .fecha p{
     color: white;
     font-size: 150%;
+    line-height: .5em;
     font-weight: 700;
 }
 
