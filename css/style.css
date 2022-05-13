@@ -39,27 +39,6 @@ body{
 }
 
 
-.container{
-    max-width: var(--anchoMaximo);
-    margin: 0 auto;
-}
-
-.boton{
-    display: inline-block;
-    background-color: var(--colorPrincipal);
-    border: 1px solid var(--colorPrincipal);
-    padding: 1.15em;
-    text-decoration: none;
-    color: white;
-}
-.boton:hover{
-    background-color: transparent;
-    color: var(--colorPrincipal);
-}
-.boton:hover i{
-    transition: .5s;
-    transform: translateX(5px);
-}
 /* inicio header */
 
 header .nav_top{
@@ -216,8 +195,94 @@ footer a:hover{
 }
 /* final hero */
 
-/* inicio boton */
 
+/* Inicio Ourservices */
+
+#ourservices .grid{
+    display: grid;
+    padding: 0 var(--marginGrid);
+    gap: var(--marginGrid);
+}
+#ourservices article>div i{
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+.fa-truck{
+    transform: rotateY(180deg);
+}
+/* Final Ourservices */
+
+/* Inicio elementos generales */
+
+.container{
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+.boton{
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    color: white;
+}
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+}
+.boton:hover i{
+    transition: .5s;
+    transform: translateX(5px);
+}
+section{
+    padding: 2.5em 0 4em 0;
+}
+section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+section h2>span{
+    color: var(--colorPrincipal);
+}
+section .underline{
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+section .underline hr{
+    top: -1px;
+    width: 100%;
+    position: absolute;
+    border-color: var(--colorPrincipal);
+}
+section article{
+    padding: calc(var(--marginGrid) * 2) 0;
+    border-bottom: 1px solid #aaa;
+}
+section article h3{
+    font-weight: 700;
+    font-size: 110%;
+    margin: calc(var(--marginGrid)/2) 0;
+}
+section p{
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+.enlace{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+}
+/* Final elementos generales */
 
 /* mediaquerys */
 
@@ -234,6 +299,18 @@ footer a:hover{
       justify-content: space-between;
     }
 
+    #ourservices .grid{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    #ourservices .grid article:last-child{
+        grid-column: 1/3;
+        /*Se cuentan gaps, no extremos de gaps*/
+    }
+    section article{
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        padding: var(--marginGrid);
+    }
 
 }
 
@@ -259,6 +336,11 @@ footer a:hover{
         padding: 0.4em 0em 0.4em 2.5em;
     }
 
-
+    #ourservices .grid{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    #ourservices .grid article:last-child{
+        grid-column: 3/4;
+    }
 
 }
