@@ -1,7 +1,29 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
-:root{
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+/* montserrat 400 y 700  Handlee */
+/* fontawesome cdn 6.0  */
+/*
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+html{
+    /* para generar un scroll animado con ancla */
+    scroll-behavior: smooth;
+}
+
+:root {
     --fuentePrincipal: 'Montserrat', sans-serif;
     --fuenteSecundaria: 'Handlee', cursive;
     --colorPrincipal: #fa573a;
@@ -10,141 +32,168 @@
     --anchoMaximo: 1100px;
     --marginGrid: 1em;
 }
-*{
-    box-sizing: border-box;
-}
-img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
-a{
-    text-decoration: none;
-}
-html{
-    /* Para generar un scroll animado */
-    scroll-behavior: smooth;
-}
 body{
     font-family: var(--fuentePrincipal);
     font-size: var(--fontSize);
 }
+
 .container{
     max-width: var(--anchoMaximo);
     margin: 0 auto;
 }
-/* Inicio Header */
-header .navTop{
+
+/* inicio header */
+
+header .nav_top{
     background-color: var(--colorSecundario);
     padding: var(--marginGrid);
 }
-header .navTop .container{
+
+header .nav_top .container{
     display: flex;
     justify-content: space-around;
 }
-header .navTop a{
+
+header .nav_top a{
     text-decoration: none;
 }
-header .navTop a i{
+
+header .nav_top a i{
     color: var(--colorPrincipal);
     font-size: 140%;
-    /*Los iconos tipograficos funcionan como fuentes*/
 }
-header .navTop a i{
-    color: var(--colorPrincipal);
-}
-header .navTop a span{
+
+header .nav_top a span{
     color: white;
     display: none;
 }
-header nav .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-header nav figure{
-    width: 150px;
+
+header nav{
     padding: var(--marginGrid);
 }
+
+header nav .logo{
+    float: left;
+    max-width: 100px;
+}
+
 header nav .hamburguesa{
-    padding: var(--marginGrid);
+    float: right;
+    cursor: pointer;
+    width: 2em;
 }
+
 header nav .hamburguesa div{
-    width: 30px;
-    border-top: 2px solid #80808080;
-    margin-bottom: 10px;
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
 }
-header nav ul{
+
+header nav .menu {
+    clear: both;
+    padding-top: 0.625em /* 10px */;
+    text-align: center;
+}
+
+header nav .menu a{
     display: block;
+    text-decoration: none;
+    padding: var(--marginGrid);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a{
+    border: 0px;
+}
+
+header nav .menu :is(.activo, a:hover){
+    color: var(--colorPrincipal);
+}
+
+header nav:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;   
+}
+/* final header */
+
+/* principo de footer */
+
+footer{
+    position: fixed;
+    bottom:0;
     width: 100%;
+    background-color: var(--colorSecundario);
+    color: white;
     padding: var(--marginGrid);
 }
-header nav ul li{
-    text-align: center;
-    padding: var(--marginGrid);
-    border-bottom: 1px solid grey;
-}
-header nav ul li:last-of-type{
-    border-bottom: none;
-}
-header nav ul li a{
-    color: grey;
-}
-.activo{
-    color: var(--colorPrincipal);
-}
-/* Final Header */
-/* Principio de hero */
-.hero{
-    background-image: url(../images/fondo.jpg);
-    background-size: cover;
-    padding: 100px var(--marginGrid);
-}
-h1{
-    font-family: var(--fuenteSecundaria);
+
+footer a{
     color: white;
-    font-size: 250%;
+    text-decoration: none;
 }
-.hero h2{
-    color: var(--colorPrincipal);
-    font-size: 120%;
-    text-shadow: 2px 2px 5px black;
-    margin: var(--marginGrid) 0 ;
+
+footer a:hover{
+    color:  var(--colorPrincipal)
 }
-.hero h3{
-    margin: var(--marginGrid) 0 ;
-    color: white;
+
+.arriba{
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    font-size: 2em;
 }
-.hero>.boton{
-    background-color: var(--colorPrincipal);
-    padding: var(--marginGrid);
-    text-align: center;
-    width: 175px;
-    margin-top: calc(var(--marginGrid)*2);
-    margin-bottom: var(--marginGrid);
+
+.arriba a{
+    color: var(--colorPrincipal)
 }
-.hero>.boton>a{
-    color: white;
-}
-.hero section{
-    display: flex;
-    width: 175px;
-    justify-content: space-between;
-}
-.hero section article{
-    font-size: 200%;
-}
-.hero section article a{
-    color: white;
-}
-/* Final de hero */
-/* Media Queries */
+
+/* final footer */
+
+
+
+
+
+/* mediaquerys */
+
+/* breakpoint 768px */
 @media(min-width: 48em){
-    header .navTop a span{
-        display: inline;
+    
+    header .nav_top a span{
+      display: inline;
     }
-    header .navTop .container{
-        justify-content: space-between;
+
+    header .nav_top .container{
+      justify-content: space-between;
     }
+
+
+}
+
+/* breakpoint 1004px */
+
+@media(min-width: 62.750em){
+    header nav .hamburguesa{
+        display: none;
+    }
+
+    header nav .menu{
+        float: right;
+        padding-top: 0;
+        clear: none;
+    }
+
+    header nav .menu li{
+        display: inline-block;
+    }
+
+    header nav .menu a{
+        border: 0px;
+        padding: 0.4em 0em 0.4em 2.5em;
+    }
+
+
+
 }
