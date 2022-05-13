@@ -221,18 +221,20 @@ footer a:hover{
 
 /* mediaquerys */
 
+
+
 /* breakpoint 768px */
 @media(min-width: 48em){
     
     header .nav_top a span{
-        display: inline;
+      display: inline;
     }
-    
+
     header .nav_top .container{
-        justify-content: space-between;
+      justify-content: space-between;
     }
-    
-    
+
+
 }
 
 /* breakpoint 1004px */
@@ -241,32 +243,8 @@ footer a:hover{
     header nav .hamburguesa{
         display: none;
     }
-    
+
     header nav .menu{
-        /* principo de hero */
-        .hero{
-            background-image: url(../images/fondo.jpg);
-            height: 60vh;
-        }
-        /* final hero */
-        /* principo de hero */
-        .hero{
-            background-image: url(../images/fondo.jpg);
-            height: 60vh;
-        }
-        /* final hero */
-        /* principo de hero */
-        .hero{
-            background-image: url(../images/fondo.jpg);
-            height: 60vh;
-        }
-        /* final hero */
-        /* principo de hero */
-        .hero{
-            background-image: url(../images/fondo.jpg);
-            height: 60vh;
-        }
-        /* final hero */
         float: right;
         padding-top: 0;
         clear: none;
