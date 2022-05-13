@@ -38,6 +38,79 @@ body{
     font-size: var(--fontSize);
 }
 
+/* Inicio elementos generales */
+
+.container{
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+.boton{
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    color: white;
+}
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+}
+.boton:hover i{
+    transition: .5s;
+    transform: translateX(5px);
+}
+section{
+    padding: 2.5em 0 4em 0;
+}
+section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+section h2>span{
+    color: var(--colorPrincipal);
+}
+section .underline{
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+section .underline hr{
+    top: -1px;
+    width: 100%;
+    position: absolute;
+    border-color: var(--colorPrincipal);
+}
+section article{
+    padding: calc(var(--marginGrid) * 2) 0;
+    border-bottom: 1px solid #aaa;
+}
+section article :is(h3 , h4){
+    font-weight: 700;
+    font-size: 110%;
+    margin: calc(var(--marginGrid)/2) 0;
+}
+section article h4{
+    color: var(--colorPrincipal);
+}
+section p{
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+.enlace{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+}
+/* Final elementos generales */
+
 
 /* inicio header */
 
@@ -214,75 +287,53 @@ footer a:hover{
 }
 /* Final Ourservices */
 
-/* Inicio elementos generales */
-
-.container{
-    max-width: var(--anchoMaximo);
-    margin: 0 auto;
+/* Inicio Blog */
+section#blog .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--marginGrid);
 }
-
-.boton{
-    display: inline-block;
-    background-color: var(--colorPrincipal);
-    border: 1px solid var(--colorPrincipal);
-    padding: 1.15em;
-    text-decoration: none;
-    color: white;
+section#blog .container article{
+    width: 50%;
+    height: auto;
 }
-.boton:hover{
-    background-color: transparent;
-    color: var(--colorPrincipal);
-}
-.boton:hover i{
-    transition: .5s;
-    transform: translateX(5px);
-}
-section{
-    padding: 2.5em 0 4em 0;
-}
-section h2{
-    color: black;
-    font-family: var(--fuenteSecundaria);
+section#blog h3{
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
     font-size: 200%;
-    text-align: center;
+    text-align: left;
 }
-section h2>span{
-    color: var(--colorPrincipal);
+section#blog h4{
+    margin: var(--marginGrid) 0;
 }
-section .underline{
+section#blog p{
+    line-height: 1.5em;
+}
+section#blog article{
+    padding: var(--marginGrid);
+}
+section#blog article figure{
     position: relative;
-    width: 100px;
-    margin: 0 auto;
-    font-weight: 700;
-    color: var(--colorPrincipal);
-    text-align: center;
+    padding-bottom: var(--marginGrid);
 }
-section .underline hr{
-    top: -1px;
-    width: 100%;
+section#blog article figure .fecha{
     position: absolute;
-    border-color: var(--colorPrincipal);
+    top: 0;
+    left: 0;
+    background-color: #fa573ac0;
+    width: 110px;
+    text-align: center;
+    padding-top: var(--marginGrid);
 }
-section article{
-    padding: calc(var(--marginGrid) * 2) 0;
-    border-bottom: 1px solid #aaa;
-}
-section article h3{
-    font-weight: 700;
-    font-size: 110%;
-    margin: calc(var(--marginGrid)/2) 0;
-}
-section p{
-    color: #777;
-    line-height: 1.15em;
-    margin-bottom: var(--marginGrid);
-}
-.enlace{
-    text-decoration: none;
-    color: var(--colorPrincipal);
+section#blog article figure .fecha p{
+    color: white;
+    font-size: 150%;
+    line-height: .5em;
     font-weight: 700;
 }
-/* Final elementos generales */
+
+/* Final Blog */
 
 /* mediaquerys */
 
@@ -308,10 +359,11 @@ section p{
     }
     section article{
         border-bottom: 0px;
-        border-left: 1px solid #aaa;
         padding: var(--marginGrid);
     }
-
+    #ourservices article{
+        border-left: 1px solid #aaa;
+    }
 }
 
 /* breakpoint 1004px */
@@ -342,5 +394,7 @@ section p{
     #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
-
+    section#blog div.container article{
+        width: 33.333%;
+    }
 }
