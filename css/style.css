@@ -89,7 +89,6 @@ section .underline hr{
 }
 section article{
     padding: calc(var(--marginGrid) * 2) 0;
-    border-bottom: 1px solid #aaa;
 }
 section article :is(h3 , h4){
     font-weight: 700;
@@ -276,6 +275,10 @@ footer a:hover{
     padding: 0 var(--marginGrid);
     gap: var(--marginGrid);
 }
+#ourservices article{
+    padding: calc(var(--marginGrid) * 2) 0;
+    border-bottom: 1px solid #aaa;
+}
 #ourservices article>div i{
     border: 1px solid var(--colorPrincipal);
     color: var(--colorPrincipal);
@@ -340,7 +343,7 @@ section#blog article figure .fecha p{
     background-color: var(--colorSecundario);
     min-height: 100vh;
 }
-#menu :is(h2 , h3 , p , a){
+#menu :is(h2 , h3 , p , li a){
     color: white;
 }
 #menu a{
@@ -350,6 +353,11 @@ section#blog article figure .fecha p{
     font-size: 120%;
     font-weight: 700;
     margin-bottom: var(--marginGrid);
+}
+#menu h3 span{
+    font-weight: 400;
+    color: var(--colorPrincipal);
+    padding: 0 var(--marginGrid);
 }
 #menu .offers h3::after{
     content: "";
@@ -362,7 +370,7 @@ section#blog article figure .fecha p{
     line-height: 1.5em;
     font-size: 90%;
 }
-#menu .wrapper{
+#menu .container{
     padding: 0 var(--marginGrid) ;
 }
 #menu nav a{
@@ -375,9 +383,9 @@ section#blog article figure .fecha p{
     background-color: var(--colorPrincipal);
     border-radius: 5px;
 }
-#menu .wrapper{
+#menu .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 /* Final Menu */
 /* mediaquerys */
@@ -441,5 +449,11 @@ section#blog article figure .fecha p{
     }
     section#blog div.container article{
         width: 33.333%;
+    }
+    #menu .container{
+        flex-direction: row;
+    }
+    #menu .container :is(nav , .offers){
+        max-width: 15.625em;
     }
 }
