@@ -1,17 +1,12 @@
+/* #region imports*/
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
-/* montserrat 400 y 700  Handlee */
-/* fontawesome cdn 6.0  */
-/*
-font-family: 'Handlee', cursive;
-font-family: 'Montserrat', sans-serif;
-*/
-
+/* #endregion */
+/* #region basicos */
 * {
     box-sizing: border-box;
 }
-
 img{
     width: 100%;
     display: block;
@@ -38,7 +33,8 @@ body{
     font-size: var(--fontSize);
 }
 
-/* Inicio elementos generales */
+/* #endregion */
+/* #region General */
 
 .container{
     max-width: var(--anchoMaximo);
@@ -108,10 +104,8 @@ section p{
     color: var(--colorPrincipal);
     font-weight: 700;
 }
-/* Final elementos generales */
-
-
-/* inicio header */
+/* #endregion */
+/* #region header */
 
 header .nav_top{
     background-color: var(--colorSecundario);
@@ -185,10 +179,8 @@ header nav:after{
     height: 0;
     clear: both;   
 }
-/* final header */
-
-
-/* principo de footer */
+/* #endregion */
+/* #region footer */
 
 footer{
     position: fixed;
@@ -219,10 +211,8 @@ footer a:hover{
     color: var(--colorPrincipal)
 }
 
-/* final footer */
-
-
-/* principo de hero */
+/* #endregion */
+/* #region hero */
 .hero{
     background-image: url(../images/fondo.jpg);
     background-color: #999;
@@ -265,10 +255,8 @@ footer a:hover{
     text-decoration: none;
     font-size: 200%;
 }
-/* final hero */
-
-
-/* Inicio Ourservices */
+/* #endregion */
+/* #region ourservices */
 
 #ourservices .grid{
     display: grid;
@@ -288,9 +276,8 @@ footer a:hover{
 .fa-truck{
     transform: rotateY(180deg);
 }
-/* Final Ourservices */
-
-/* Inicio Blog */
+/* #endregion */
+/* #region blog */
 section#blog .container{
     display: flex;
     flex-direction: row;
@@ -336,8 +323,8 @@ section#blog article figure .fecha p{
     font-weight: 700;
 }
 
-/* Final Blog */
-/* Inicio Menu */
+/* #endregion */
+/* #region Menu */
 
 .fondo{
     background-color: var(--colorSecundario);
@@ -384,12 +371,9 @@ section#blog article figure .fecha p{
     background-color: var(--colorPrincipal);
     border-radius: 5px;
 }
-/* Final Menu */
-/* mediaquerys */
-
-
-
-/* breakpoint 768px */
+/* #endregion */
+/* #region mediaqueries */
+/* #region 768px */
 @media(min-width: 48em){
     
     header .nav_top a span{
@@ -415,8 +399,8 @@ section#blog article figure .fecha p{
         border-left: 1px solid #aaa;
     }
 }
-
-/* breakpoint 1004px */
+/* #endregion */
+/* #region 1004px */
 
 @media(min-width: 62.750em){
     header nav .hamburguesa{
@@ -454,3 +438,5 @@ section#blog article figure .fecha p{
         max-width: 15.625em;
     }
 }
+/* #endregion */
+/* #endregion */
