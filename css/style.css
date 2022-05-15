@@ -60,16 +60,16 @@ body{
 section{
     padding: 2.5em 0 4em 0;
 }
-section h2{
+h2{
     color: black;
     font-family: var(--fuenteSecundaria);
     font-size: 200%;
     text-align: center;
 }
-section h2>span{
+h2>span{
     color: var(--colorPrincipal);
 }
-section .underline{
+.underline{
     position: relative;
     width: 100px;
     margin: 0 auto;
@@ -77,7 +77,7 @@ section .underline{
     color: var(--colorPrincipal);
     text-align: center;
 }
-section .underline hr{
+.underline hr{
     top: -1px;
     width: 100%;
     position: absolute;
@@ -373,8 +373,11 @@ section#blog article figure .fecha p{
     border-radius: 5px;
 }
 /* #endregion */
-
 /* #region team */
+#team{
+    display: flex;
+    flex-direction: column;
+}
 #team article{
     padding: 0 var(--marginGrid) var(--marginGrid) var(--marginGrid);
 }
@@ -486,6 +489,9 @@ section#blog article figure .fecha p{
     #menu .container>section>article img{
         grid-area: 1/1/span 3/1 ;
         padding: var(--marginGrid);
+    }
+    #team{
+        flex-direction: row;
     }
 }
 /* #endregion */
