@@ -431,11 +431,28 @@ section#blog article figure .fecha p{
     section#blog div.container article{
         width: 33.333%;
     }
-    #menu .container{
+    #menu>.container{
         flex-direction: row;
+        justify-content: space-between;
     }
-    #menu .container :is(nav , .offers){
+    #menu .container aside{
         max-width: 15.625em;
+    }
+    #menu .container>section{
+        padding-top: 0;
+    }
+    #menu .container>section>article{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 43.75em;
+    }
+    #menu .container>section>article:first-of-type{
+        padding-top: 0;
+    }
+    #menu .container>section>article img{
+        grid-area: 1/1/span 3/1 ;
+        padding: var(--marginGrid);
     }
 }
 /* #endregion */
