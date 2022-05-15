@@ -373,6 +373,38 @@ section#blog article figure .fecha p{
     border-radius: 5px;
 }
 /* #endregion */
+
+/* #region team */
+#team article{
+    padding: 0 var(--marginGrid) var(--marginGrid) var(--marginGrid);
+}
+#team article figure{
+    position: relative;
+}
+#team article figure .person{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #00000080;
+}
+#team article figure .person :is(h3 , p){
+    color: white;
+    margin: 0 auto;
+}#team article figure .person h3{
+    padding-top: var(--marginGrid);
+}
+#team article figure .person p{
+    padding-bottom: var(--marginGrid);
+}
+#team article figure .person h3:after{
+    content: "";
+    width: 40px;
+    border-bottom: 2px solid var(--colorPrincipal);
+    margin: var(--marginGrid) auto;
+    display: block;
+}
+/* #endregion */
 /* #region mediaqueries */
 /* #region 768px */
 @media(min-width: 48em){
