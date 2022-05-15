@@ -355,7 +355,6 @@ section#blog article figure .fecha p{
     margin-bottom: var(--marginGrid);
 }
 #menu h3 span{
-    font-weight: 400;
     color: var(--colorPrincipal);
     padding: 0 var(--marginGrid);
 }
@@ -370,8 +369,10 @@ section#blog article figure .fecha p{
     line-height: 1.5em;
     font-size: 90%;
 }
-#menu .container{
+#menu>.container{
     padding: 0 var(--marginGrid) ;
+    display: flex;
+    flex-direction: column;
 }
 #menu nav a{
     display: block;
@@ -382,10 +383,6 @@ section#blog article figure .fecha p{
 #menu nav a.activo{
     background-color: var(--colorPrincipal);
     border-radius: 5px;
-}
-#menu .container{
-    display: flex;
-    flex-direction: column;
 }
 /* Final Menu */
 /* mediaquerys */
