@@ -350,7 +350,7 @@ section#blog article figure .fecha p{
     margin-top: var(--marginGrid);
     display: block;
     width: 50px;
-    border-top: 1px solid var(--colorPrincipal);
+    border-top: 2px solid var(--colorPrincipal);
 }
 #menu p{
     line-height: 1.5em;
@@ -362,6 +362,7 @@ section#blog article figure .fecha p{
     flex-direction: column;
 }
 #menu nav a{
+    font-weight: 700;
     display: block;
     margin: var(--marginGrid) 0;
     padding: var(--marginGrid);
