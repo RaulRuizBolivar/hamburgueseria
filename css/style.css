@@ -432,7 +432,9 @@ section#blog article figure .fecha p{
         padding: var(--marginGrid);
     }
     #ourservices article{
+        padding-left: var(--marginGrid);
         border-left: 1px solid #aaa;
+        border-bottom: none;
     }
 }
 /* #endregion */
