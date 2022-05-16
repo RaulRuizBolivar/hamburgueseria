@@ -461,6 +461,14 @@ section .flex{
     #ourservices article{
         border-left: 1px solid #aaa;
     }
+    #aboutUs .flex{
+        flex-direction: row;
+        padding-top: var(--marginGrid);
+    }
+    #aboutUs figure{
+        width: 85%;
+        margin: .5em auto;
+    }
 }
 /* #endregion */
 /* #region 1004px */
