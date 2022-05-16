@@ -86,10 +86,14 @@ h2>span{
 section article{
     padding: calc(var(--marginGrid) * 2) 0;
 }
-section article :is(h3 , h4){
+section :is(h3 , h4){
     font-weight: 700;
     font-size: 110%;
     margin: calc(var(--marginGrid)/2) 0;
+}
+section h4{
+    color: var(--colorPrincipal);
+    margin-bottom: calc(var(--marginGrid) / 2);
 }
 section article h4{
     color: var(--colorPrincipal);
@@ -408,6 +412,29 @@ section#blog article figure .fecha p{
     display: block;
 }
 /* #endregion */
+/* #region aboutUs*/
+section .flex{
+    padding: 0 var(--marginGrid);
+    display: flex;
+    flex-direction: column;
+}
+#aboutUs figure{
+    width: 85%;
+    margin: 2em auto;
+}
+#aboutUs figure .marco{
+    border: 3px solid var(--colorPrincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+#aboutUs figure .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+#aboutUs figure:hover :is(.marco , .marco img){
+    transform: rotateZ(0deg);
+}
+/* #endregion */
 /* #region mediaqueries */
 /* #region 768px */
 @media(min-width: 48em){
@@ -435,6 +462,14 @@ section#blog article figure .fecha p{
         padding-left: var(--marginGrid);
         border-left: 1px solid #aaa;
         border-bottom: none;
+    }
+    #aboutUs .flex{
+        flex-direction: row;
+        padding-top: var(--marginGrid);
+    }
+    #aboutUs figure{
+        width: 85%;
+        margin: .5em auto;
     }
 }
 /* #endregion */
